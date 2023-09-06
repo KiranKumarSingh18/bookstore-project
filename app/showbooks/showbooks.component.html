@@ -1,4 +1,4 @@
-<table>
+<table align="center" border="1" width="70%" bgcolor="lightBlue">
     <tr>
         <th>Book Title</th>
         <th>Book Author</th>
@@ -9,8 +9,8 @@
     <tr *ngFor="let b of books" >
       
             <th>{{b.title}}</th>
-            <th>{{b.author_id}}</th>
-            <th>{{b.publisher_id}}</th>
+            <th>{{b.authorId.authorID}}</th>
+            <th>{{b.publisherId.publisherID}}</th>
             <th>{{b.category}}</th>
             <th>{{b.price}}</th>
     </tr>

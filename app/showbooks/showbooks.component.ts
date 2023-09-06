@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { AppService } from '../app.service';
+import { ShowbooksService } from '../showbooks.service'; 
 @Component({
   selector: 'app-showbooks',
   templateUrl: './showbooks.component.html',
@@ -8,17 +9,15 @@ import { AppService } from '../app.service';
 })
 export class ShowbooksComponent implements OnInit
 {
-  bookList:any[]=[];
+  books:any[]=[];
 
-  constructor(private appservice : AppService){}
+  constructor(private showbookservice : ShowbooksService){}
 
   ngOnInit(): void
     {
-        this.Appservice.getAllbookDetails().subscribe((data)=> this.bookList = data);
-        console.log(this.bookList.length);
-
+        this.showbookservice.getAllbookDetails().subscribe((data)=> this.books = data);
+        console.log(this.books)
     }
 
-    
 }
  

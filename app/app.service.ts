@@ -37,11 +37,6 @@ export class AppService {
     return this.httpClient.post(url,data);
   }
 
-  public getAllbookDetails() : Observable<any>
-    {
-        return this.httpClient.get('http://localhost:8083/customer/authors');
-    }
-
 }
 
 

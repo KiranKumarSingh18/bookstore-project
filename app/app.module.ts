@@ -11,11 +11,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { LoginModule } from './login/login.module';
 import { ShowbooksComponent } from './showbooks/showbooks.component';
+import { ShowbooksService } from './showbooks.service';
+import { ShowbooksModule } from './showbooks/showbooks.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ShowbooksComponent,
     // LoginComponent,
     // LoginauthComponent
   ],
@@ -25,7 +26,8 @@ import { ShowbooksComponent } from './showbooks/showbooks.component';
     LoginauthModule,
     FormsModule,
     HttpClientModule,
-    LoginModule
+    LoginModule,
+    ShowbooksModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent]
