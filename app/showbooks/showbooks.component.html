@@ -1,0 +1,18 @@
+<table>
+    <tr>
+        <th>Book Title</th>
+        <th>Book Author</th>
+        <th>Book Publisher</th>
+        <th>Book Category</th>
+        <th>Book Price</th>
+    </tr>
+    <tr *ngFor="let b of books" >
+      
+            <th>{{b.title}}</th>
+            <th>{{b.author_id}}</th>
+            <th>{{b.publisher_id}}</th>
+            <th>{{b.category}}</th>
+            <th>{{b.price}}</th>
+    </tr>
+
+</table>
