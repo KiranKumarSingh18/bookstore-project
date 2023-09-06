@@ -65,4 +65,9 @@ public class CustomerController {
 		return HttpStatus.NOT_FOUND;
 	}
 
+	@PostMapping(value="/login",consumes="application/json")
+	public boolean countOfValidCustomer(@RequestBody Customer customer) {
+		return customerService.countOfCustomer(customer.getEmail(),customer.getPassword());
+	}
+
 }
