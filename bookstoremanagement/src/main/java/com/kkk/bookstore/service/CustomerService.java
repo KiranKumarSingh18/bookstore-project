@@ -46,4 +46,11 @@ public class CustomerService {
 			return true;
 		return false;
 	}
+
+	@Transactional
+	public boolean countOfCustomer(String email,String password) {
+		return customerRepo.validateLogin(email, password);
+		
+	}
+	
 }
